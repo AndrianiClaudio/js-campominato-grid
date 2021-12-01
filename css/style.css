@@ -75,21 +75,21 @@ main.main {
     border: 1px solid black;
 }
 
-[class^= 'square-'] {
+.square {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
 }
-.square-easy {
+.square--easy {
     width: calc(100% / var(--easy-col-row));
     height: calc(100% / var(--easy-col-row));
 }
-.square-medium {
+.square--medium {
     width: calc(100% / var(--medium-col-row));
     height: calc(100% / var(--medium-col-row));
 }
-.square-hard {
+.square--hard {
     width: calc(100% / var(--hard-col-row));
     height: calc(100% / var(--hard-col-row));
 
