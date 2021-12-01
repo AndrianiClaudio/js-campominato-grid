@@ -8,6 +8,7 @@
     --medium-col-row: 9;
     --hard-col-row: 10;
     --main-bg-color: 127, 255, 212;
+    --selected-square-color: 100, 149, 237;
 }
 
 * {
@@ -68,6 +69,8 @@ main.main {
 }
 .container {
     display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     width: 700px;
     height: 500px;
     /* background-color: red; */
@@ -80,6 +83,9 @@ main.main {
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+}
+.square.click {
+    background-color: rgb(var(--selected-square-color));
 }
 .square--easy {
     width: calc(100% / var(--easy-col-row));
