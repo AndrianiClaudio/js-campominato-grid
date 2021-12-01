@@ -32,7 +32,7 @@ footer.footer {
 /* header */
 header.header {
     justify-content: space-between;
-    height: var(--header-height);
+    min-height: var(--header-height);
     /* background-color: yellow; */
 }
 /* .header-left,.header-right {
@@ -55,7 +55,7 @@ span.difficulty {
     font-size: 115%;
 }
 select > option {
-    width: 6rem;
+    width: 8rem;
 }
 button.btn-play {
     padding: 0 1.5rem;
@@ -86,6 +86,8 @@ main.main {
 }
 .square.click {
     background-color: rgb(var(--selected-square-color));
+    color: white;
+    border: 2px solid black;
 }
 .square--easy {
     width: calc(100% / var(--easy-col-row));
@@ -111,7 +113,7 @@ main.main {
     color: black;
 }
 
-@media screen and (max-width: 682px){
+/* @media screen and (max-width: 682px){
     header.header {
         height: var(--header-mini-screen-height);
     }
@@ -127,4 +129,4 @@ main.main {
     main.main {
         height: calc(100vh - var(--header-extra-mini-screen-height) - var(--footer-height));
     }
-}
+} */
