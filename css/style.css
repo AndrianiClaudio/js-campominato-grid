@@ -1,5 +1,7 @@
 :root {
     --header-height: 100px;
+    --header-mini-screen-height: 150px;
+    --header-extra-mini-screen-height: 200px;
     --title-font-size: 2.5rem;
     --footer-height: 50px;
 }
@@ -17,8 +19,8 @@ html {
 header.header,
 .header-left,
 .header-right,
-.container,
-.footer {
+main.main,
+footer.footer {
     display: flex;
     align-items: center;
 }
@@ -55,7 +57,38 @@ button.btn-play {
     padding: 0 1.5rem;
 }
 /* container */
-.container {
+main.main {
     justify-content: center;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+.container {
+    min-height: 500px;
+    display: flex;
+    width: 700px;
+    height: 500px;
+    background-color: red;
+    flex-wrap: wrap;
+}
+.square-10 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid black;
 }
 /* footer */
+@media screen and (max-width: 682px){
+    header.header {
+        height: var(--header-mini-screen-height);
+    }
+    main.main {
+        height: calc(100vh - var(--header-mini-screen-height) - var(--footer-height));
+    }
+}
+
+@media screen and (max-width: 577px){
+    header.header {
+        height: var(--header-extra-mini-screen-height);
+    }
+    main.main {
+        height: calc(100vh - var(--header-extra-mini-screen-height) - var(--footer-height));
+    }
+}
