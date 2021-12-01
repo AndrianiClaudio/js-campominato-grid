@@ -1,9 +1,61 @@
+:root {
+    --header-height: 100px;
+    --title-font-size: 2.5rem;
+    --footer-height: 50px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body::before {
-    content: 'css/style.css caricato completamente';
+html {
+    font-size: 100%;
 }
+/* flex */
+header.header,
+.header-left,
+.header-right,
+.container,
+.footer {
+    display: flex;
+    align-items: center;
+}
+/* header */
+header.header {
+    justify-content: space-between;
+    height: var(--header-height);
+    width: 100%;
+    /* background-color: yellow; */
+}
+/* .header-left,.header-right {
+    background-color: goldenrod;
+} */
+/* header-left */
+h1.title {
+    display: inline-block;
+    font-size: var(--title-font-size);
+}
+#logo {
+    padding: 0 2rem;
+}
+/* header-right */
+.header-right{
+    padding-right: 1rem;
+    column-gap: 0.2rem;
+}
+span.difficulty {
+    font-size: 115%;
+}
+select > option {
+    width: 6rem;
+}
+button.btn-play {
+    padding: 0 1.5rem;
+}
+/* container */
+.container {
+    justify-content: center;
+}
+/* footer */
