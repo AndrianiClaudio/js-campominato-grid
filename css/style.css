@@ -1,16 +1,15 @@
+/* variabili */
 :root {
     --header-height: 100px;
     --header-mini-screen-height: 150px;
     --header-extra-mini-screen-height: 200px;
     --title-font-size: 2.5rem;
     --footer-height: 50px;
-    --easy-col-row: 7;
-    --medium-col-row: 9;
-    --hard-col-row: 10;
     --main-bg-color: 127, 255, 212;
     --selected-square-color: 100, 149, 237;
 }
 
+/* generali */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,11 +32,7 @@ footer.footer {
 header.header {
     justify-content: space-between;
     min-height: var(--header-height);
-    /* background-color: yellow; */
 }
-/* .header-left,.header-right {
-    background-color: goldenrod;
-} */
 /* header-left */
 h1.title {
     display: inline-block;
@@ -73,11 +68,9 @@ main.main {
     padding-bottom: 2rem;
     width: 700px;
     height: 500px;
-    /* background-color: red; */
     flex-wrap: wrap;
-    /* border: 1px solid black; */
 }
-
+/* square */
 .square {
     display: flex;
     justify-content: center;
@@ -89,19 +82,6 @@ main.main {
     color: white;
     border: 2px solid black;
 }
-.square--easy {
-    width: calc(100% / var(--easy-col-row));
-    height: calc(100% / var(--easy-col-row));
-}
-.square--medium {
-    width: calc(100% / var(--medium-col-row));
-    height: calc(100% / var(--medium-col-row));
-}
-.square--hard {
-    width: calc(100% / var(--hard-col-row));
-    height: calc(100% / var(--hard-col-row));
-
-}
 /* footer */
 .footer {
     height: var(--footer-height);
@@ -112,21 +92,3 @@ main.main {
 .copyright > .fas.fa-heart {
     color: black;
 }
-
-/* @media screen and (max-width: 682px){
-    header.header {
-        height: var(--header-mini-screen-height);
-    }
-    main.main {
-        height: calc(100vh - var(--header-mini-screen-height) - var(--footer-height));
-    }
-}
-
-@media screen and (max-width: 577px){
-    header.header {
-        height: var(--header-extra-mini-screen-height);
-    }
-    main.main {
-        height: calc(100vh - var(--header-extra-mini-screen-height) - var(--footer-height));
-    }
-} */
