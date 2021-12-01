@@ -66,15 +66,25 @@ main.main {
     display: flex;
     width: 700px;
     height: 500px;
-    background-color: red;
+    /* background-color: red; */
     flex-wrap: wrap;
 }
-.square-10 {
+/* .square-10 {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 2px solid black;
-}
+} */
 /* footer */
+.footer {
+    height: var(--footer-height);
+}
+.copyright {
+    margin-left: 1rem;
+}
+.copyright > .fas.fa-heart {
+    color: black;
+}
+
 @media screen and (max-width: 682px){
     header.header {
         height: var(--header-mini-screen-height);
