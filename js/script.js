@@ -43,6 +43,16 @@ function generateGrid(difficulty) {
     }
     printGrid (row,col);
 }
+function createDiv(mainClass) {
+    const div = document.createElement('div');
+    div.classList.add(mainClass);
+    return div;
+}
+function createOption(value) {
+    let option = document.createElement('option');
+    option.value = value;
+    return option;
+}
 // CREAZIONE ELEMENTI DOM
 function createDom (body) { 
     // creo header
@@ -108,32 +118,24 @@ function createDom (body) {
     body.prepend(header,main,footer);
     return button;
 }
-function createDiv (mainClass) {
-    const div = document.createElement('div');
-    div.classList.add(mainClass);
-    return div;
-}
-function createOption(value) {
-    let option = document.createElement('option');
-    option.value = value;
-    return option;
-}
 
 const body = document.querySelector('body');
 //ottengo bottone gioco
 let button = createDom(body);
 //azione play
+const select = document.querySelector('select');
+//cambia griglia al click sul bottone
 button.addEventListener('click', function() {
-    //cambia griglia al click sul bottone
-    const select = document.querySelector('select');
     //creo griglia a seconda delle dimenzioni
     switch(select.value) {
         default: generateGrid(select.value);
     }
-    //cambia griglia al change della select
-    select.addEventListener('change',function() {
-        switch (select.value) {
-            default: generateGrid(select.value);
-        }
-    })
 });
+//cambia griglia al change della select
+select.addEventListener('change',function() {
+    switch (select.value) {
+        default: generateGrid(select.value);
+    }
+})
+
+
